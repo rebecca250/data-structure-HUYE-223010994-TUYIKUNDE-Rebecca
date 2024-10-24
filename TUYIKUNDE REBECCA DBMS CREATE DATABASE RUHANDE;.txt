@@ -1,0 +1,176 @@
+mysql> CREATE DATABASE RUHANDE;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> USE RUHANDE;
+Database changed
+mysql> CREATE TABLE NGOMA (ID INT(10),F_NAME CHAR(20),L_NAME CHAR(20),GENDER CHAR(10),PROVINCE CHAR(20),DISTRICT CHAR(30),SECTOR CHAR(12),CELL CHAR(10),EMAIL_ADDRESS CHAR(40),TEL_NO INT(11));
+Query OK, 0 rows affected, 2 warnings (0.02 sec)
+
+mysql> INSERT INTO NGOMA('1120042345678904','MUTONI','ANGE','FEMALE','SOUTH','NYANZA','BUSASAMANA','NYAMURE','angemuto2023@gmail.com','0798567382');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1120042345678904','MUTONI','ANGE','FEMALE','SOUTH','NYANZA','BUSASAMANA','NYAMU' at line 1
+mysql> INSERT INTO NGOMA  VALUES('1120042345678904','MUTONI','ANGE','FEMALE','SOUTH','NYANZA','BUSASAMANA','NYAMURE','angemuto2023@gmail.com','0798567382');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> SELECT*FROM NGOMA;
++------------+--------+--------+--------+----------+----------+------------+---------+------------------------+-----------+
+| ID         | F_NAME | L_NAME | GENDER | PROVINCE | DISTRICT | SECTOR     | CELL    | EMAIL_ADDRESS          | TEL_NO    |
++------------+--------+--------+--------+----------+----------+------------+---------+------------------------+-----------+
+| 2147483647 | MUTONI | ANGE   | FEMALE | SOUTH    | NYANZA   | BUSASAMANA | NYAMURE | angemuto2023@gmail.com | 798567382 |
++------------+--------+--------+--------+----------+----------+------------+---------+------------------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('1120042345345904','MUTESI','MAMY','FEMALE','SOUTH','RUHANGO','KIGOMA','MBUYE','mamymutesi2023@gmail.com','0798237382');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql>  CREATE TABLE NGOMA (ID INT(30),F_NAME CHAR(20),L_NAME CHAR(20),GENDER CHAR(10),PROVINCE CHAR(20),DISTRICT CHAR(30),SECTOR CHAR(12),CELL CHAR(10),EMAIL_ADDRESS CHAR(40),TEL_NO INT(11));
+ERROR 1050 (42S01): Table 'ngoma' already exists
+mysql> SELECT *FROM NGOMA;
++------------+--------+--------+--------+----------+----------+------------+---------+--------------------------+-----------+
+| ID         | F_NAME | L_NAME | GENDER | PROVINCE | DISTRICT | SECTOR     | CELL    | EMAIL_ADDRESS            | TEL_NO    |
++------------+--------+--------+--------+----------+----------+------------+---------+--------------------------+-----------+
+| 2147483647 | MUTONI | ANGE   | FEMALE | SOUTH    | NYANZA   | BUSASAMANA | NYAMURE | angemuto2023@gmail.com   | 798567382 |
+| 2147483647 | MUTESI | MAMY   | FEMALE | SOUTH    | RUHANGO  | KIGOMA     | MBUYE   | mamymutesi2023@gmail.com | 798237382 |
++------------+--------+--------+--------+----------+----------+------------+---------+--------------------------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('1200326734120974','GANZA','GAEL','MALE','NORTH','MUSANZE','KINIGI','MUHOZA','ganzagael2023@gmail.com','0792738901');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('1200427390123456','MPANO','GESSY','MALE','WEST','RUBAVU','KIBUYE','MUKINGO','ganzag3@gmail.com','0792738901');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('11987234568902435','TETA','BLESSING','FEMALE','SOUTH','KAMONYI','GACURABWENGE','BISHENYI','tetebless3@gmail.com','0792738901');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('11987234568902435','UWASE','FLORENCE','FEMALE','SOUTH','NYANZA','muyira','nyamure','florenceniyo03@gmail.com','0792734567');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('11987234568902435','umwiza','beata','FEMALE','SOUTH','huye','kinazi','cyegera','umwizabeat23@gmail.com','0792369807');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('11987234568902435','AGANZE','DADY','MALE','SOUTH','huye','kinazi','sogwe','aganzedady@gmail.com','0792098765');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('11987234568902435','muhire','kenny','MALE','SOUTH','nyaruguru','ruramba','ruramba','kennymuhire256@gmail.com','07923457890');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> INSERT INTO NGOMA  VALUES('11987234568902435','KEZA','JORRY','FEMALE','kigali','gasabo','masoro','munini','jorrykeza352@gmail.com','07892062463');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> SELECT *FROM NGOMA;
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+
+| ID         | F_NAME | L_NAME   | GENDER | PROVINCE | DISTRICT  | SECTOR       | CELL     | EMAIL_ADDRESS            | TEL_NO     |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+
+| 2147483647 | MUTONI | ANGE     | FEMALE | SOUTH    | NYANZA    | BUSASAMANA   | NYAMURE  | angemuto2023@gmail.com   |  798567382 |
+| 2147483647 | MUTESI | MAMY     | FEMALE | SOUTH    | RUHANGO   | KIGOMA       | MBUYE    | mamymutesi2023@gmail.com |  798237382 |
+| 2147483647 | GANZA  | GAEL     | MALE   | NORTH    | MUSANZE   | KINIGI       | MUHOZA   | ganzagael2023@gmail.com  |  792738901 |
+| 2147483647 | MPANO  | GESSY    | MALE   | WEST     | RUBAVU    | KIBUYE       | MUKINGO  | ganzag3@gmail.com        |  792738901 |
+| 2147483647 | TETA   | BLESSING | FEMALE | SOUTH    | KAMONYI   | GACURABWENGE | BISHENYI | tetebless3@gmail.com     |  792738901 |
+| 2147483647 | UWASE  | FLORENCE | FEMALE | SOUTH    | NYANZA    | muyira       | nyamure  | florenceniyo03@gmail.com |  792734567 |
+| 2147483647 | umwiza | beata    | FEMALE | SOUTH    | huye      | kinazi       | cyegera  | umwizabeat23@gmail.com   |  792369807 |
+| 2147483647 | AGANZE | DADY     | MALE   | SOUTH    | huye      | kinazi       | sogwe    | aganzedady@gmail.com     |  792098765 |
+| 2147483647 | muhire | kenny    | MALE   | SOUTH    | nyaruguru | ruramba      | ruramba  | kennymuhire256@gmail.com | 2147483647 |
+| 2147483647 | KEZA   | JORRY    | FEMALE | kigali   | gasabo    | masoro       | munini   | jorrykeza352@gmail.com   | 2147483647 |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD DOB;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> ALTER TABLE NGOMA ADD YEAR INT(20);
+Query OK, 10 rows affected, 1 warning (0.06 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> SELECT*FROM NGOMA;
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+------+
+| ID         | F_NAME | L_NAME   | GENDER | PROVINCE | DISTRICT  | SECTOR       | CELL     | EMAIL_ADDRESS            | TEL_NO     | YEAR |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+------+
+| 2147483647 | MUTONI | ANGE     | FEMALE | SOUTH    | NYANZA    | BUSASAMANA   | NYAMURE  | angemuto2023@gmail.com   |  798567382 | NULL |
+| 2147483647 | MUTESI | MAMY     | FEMALE | SOUTH    | RUHANGO   | KIGOMA       | MBUYE    | mamymutesi2023@gmail.com |  798237382 | NULL |
+| 2147483647 | GANZA  | GAEL     | MALE   | NORTH    | MUSANZE   | KINIGI       | MUHOZA   | ganzagael2023@gmail.com  |  792738901 | NULL |
+| 2147483647 | MPANO  | GESSY    | MALE   | WEST     | RUBAVU    | KIBUYE       | MUKINGO  | ganzag3@gmail.com        |  792738901 | NULL |
+| 2147483647 | TETA   | BLESSING | FEMALE | SOUTH    | KAMONYI   | GACURABWENGE | BISHENYI | tetebless3@gmail.com     |  792738901 | NULL |
+| 2147483647 | UWASE  | FLORENCE | FEMALE | SOUTH    | NYANZA    | muyira       | nyamure  | florenceniyo03@gmail.com |  792734567 | NULL |
+| 2147483647 | umwiza | beata    | FEMALE | SOUTH    | huye      | kinazi       | cyegera  | umwizabeat23@gmail.com   |  792369807 | NULL |
+| 2147483647 | AGANZE | DADY     | MALE   | SOUTH    | huye      | kinazi       | sogwe    | aganzedady@gmail.com     |  792098765 | NULL |
+| 2147483647 | muhire | kenny    | MALE   | SOUTH    | nyaruguru | ruramba      | ruramba  | kennymuhire256@gmail.com | 2147483647 | NULL |
+| 2147483647 | KEZA   | JORRY    | FEMALE | kigali   | gasabo    | masoro       | munini   | jorrykeza352@gmail.com   | 2147483647 | NULL |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET YEAR='2020' WHERE ID='2147483647';
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+------+
+| ID         | F_NAME | L_NAME   | GENDER | PROVINCE | DISTRICT  | SECTOR       | CELL     | EMAIL_ADDRESS            | TEL_NO     | YEAR |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+------+
+| 2147483647 | MUTONI | ANGE     | FEMALE | SOUTH    | NYANZA    | BUSASAMANA   | NYAMURE  | angemuto2023@gmail.com   |  798567382 | 2020 |
+| 2147483647 | MUTESI | MAMY     | FEMALE | SOUTH    | RUHANGO   | KIGOMA       | MBUYE    | mamymutesi2023@gmail.com |  798237382 | 2020 |
+| 2147483647 | GANZA  | GAEL     | MALE   | NORTH    | MUSANZE   | KINIGI       | MUHOZA   | ganzagael2023@gmail.com  |  792738901 | 2020 |
+| 2147483647 | MPANO  | GESSY    | MALE   | WEST     | RUBAVU    | KIBUYE       | MUKINGO  | ganzag3@gmail.com        |  792738901 | 2020 |
+| 2147483647 | TETA   | BLESSING | FEMALE | SOUTH    | KAMONYI   | GACURABWENGE | BISHENYI | tetebless3@gmail.com     |  792738901 | 2020 |
+| 2147483647 | UWASE  | FLORENCE | FEMALE | SOUTH    | NYANZA    | muyira       | nyamure  | florenceniyo03@gmail.com |  792734567 | 2020 |
+| 2147483647 | umwiza | beata    | FEMALE | SOUTH    | huye      | kinazi       | cyegera  | umwizabeat23@gmail.com   |  792369807 | 2020 |
+| 2147483647 | AGANZE | DADY     | MALE   | SOUTH    | huye      | kinazi       | sogwe    | aganzedady@gmail.com     |  792098765 | 2020 |
+| 2147483647 | muhire | kenny    | MALE   | SOUTH    | nyaruguru | ruramba      | ruramba  | kennymuhire256@gmail.com | 2147483647 | 2020 |
+| 2147483647 | KEZA   | JORRY    | FEMALE | kigali   | gasabo    | masoro       | munini   | jorrykeza352@gmail.com   | 2147483647 | 2020 |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA DROP YEAR;
+Query OK, 10 rows affected (0.06 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+
+| ID         | F_NAME | L_NAME   | GENDER | PROVINCE | DISTRICT  | SECTOR       | CELL     | EMAIL_ADDRESS            | TEL_NO     |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+
+| 2147483647 | MUTONI | ANGE     | FEMALE | SOUTH    | NYANZA    | BUSASAMANA   | NYAMURE  | angemuto2023@gmail.com   |  798567382 |
+| 2147483647 | MUTESI | MAMY     | FEMALE | SOUTH    | RUHANGO   | KIGOMA       | MBUYE    | mamymutesi2023@gmail.com |  798237382 |
+| 2147483647 | GANZA  | GAEL     | MALE   | NORTH    | MUSANZE   | KINIGI       | MUHOZA   | ganzagael2023@gmail.com  |  792738901 |
+| 2147483647 | MPANO  | GESSY    | MALE   | WEST     | RUBAVU    | KIBUYE       | MUKINGO  | ganzag3@gmail.com        |  792738901 |
+| 2147483647 | TETA   | BLESSING | FEMALE | SOUTH    | KAMONYI   | GACURABWENGE | BISHENYI | tetebless3@gmail.com     |  792738901 |
+| 2147483647 | UWASE  | FLORENCE | FEMALE | SOUTH    | NYANZA    | muyira       | nyamure  | florenceniyo03@gmail.com |  792734567 |
+| 2147483647 | umwiza | beata    | FEMALE | SOUTH    | huye      | kinazi       | cyegera  | umwizabeat23@gmail.com   |  792369807 |
+| 2147483647 | AGANZE | DADY     | MALE   | SOUTH    | huye      | kinazi       | sogwe    | aganzedady@gmail.com     |  792098765 |
+| 2147483647 | muhire | kenny    | MALE   | SOUTH    | nyaruguru | ruramba      | ruramba  | kennymuhire256@gmail.com | 2147483647 |
+| 2147483647 | KEZA   | JORRY    | FEMALE | kigali   | gasabo    | masoro       | munini   | jorrykeza352@gmail.com   | 2147483647 |
++------------+--------+----------+--------+----------+-----------+--------------+----------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT ID,F_NAME,L_NAME,GENDER,PROVINCE,DISTRICT FROM NGOMA;
++------------+--------+----------+--------+----------+-----------+
+| ID         | F_NAME | L_NAME   | GENDER | PROVINCE | DISTRICT  |
++------------+--------+----------+--------+----------+-----------+
+| 2147483647 | MUTONI | ANGE     | FEMALE | SOUTH    | NYANZA    |
+| 2147483647 | MUTESI | MAMY     | FEMALE | SOUTH    | RUHANGO   |
+| 2147483647 | GANZA  | GAEL     | MALE   | NORTH    | MUSANZE   |
+| 2147483647 | MPANO  | GESSY    | MALE   | WEST     | RUBAVU    |
+| 2147483647 | TETA   | BLESSING | FEMALE | SOUTH    | KAMONYI   |
+| 2147483647 | UWASE  | FLORENCE | FEMALE | SOUTH    | NYANZA    |
+| 2147483647 | umwiza | beata    | FEMALE | SOUTH    | huye      |
+| 2147483647 | AGANZE | DADY     | MALE   | SOUTH    | huye      |
+| 2147483647 | muhire | kenny    | MALE   | SOUTH    | nyaruguru |
+| 2147483647 | KEZA   | JORRY    | FEMALE | kigali   | gasabo    |
++------------+--------+----------+--------+----------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT* FROM NGOMA WHERE L_NAME='ANGE' AND PROVINCE='SOUTH';
++------------+--------+--------+--------+----------+----------+------------+---------+------------------------+-----------+
+| ID         | F_NAME | L_NAME | GENDER | PROVINCE | DISTRICT | SECTOR     | CELL    | EMAIL_ADDRESS          | TEL_NO    |
++------------+--------+--------+--------+----------+----------+------------+---------+------------------------+-----------+
+| 2147483647 | MUTONI | ANGE   | FEMALE | SOUTH    | NYANZA   | BUSASAMANA | NYAMURE | angemuto2023@gmail.com | 798567382 |
++------------+--------+--------+--------+----------+----------+------------+---------+------------------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT*FROM NGOMA WHERE F_NAME='MPANO' OR GENDER='MALE';
++------------+--------+--------+--------+----------+-----------+---------+---------+--------------------------+------------+
+| ID         | F_NAME | L_NAME | GENDER | PROVINCE | DISTRICT  | SECTOR  | CELL    | EMAIL_ADDRESS            | TEL_NO     |
++------------+--------+--------+--------+----------+-----------+---------+---------+--------------------------+------------+
+| 2147483647 | GANZA  | GAEL   | MALE   | NORTH    | MUSANZE   | KINIGI  | MUHOZA  | ganzagael2023@gmail.com  |  792738901 |
+| 2147483647 | MPANO  | GESSY  | MALE   | WEST     | RUBAVU    | KIBUYE  | MUKINGO | ganzag3@gmail.com        |  792738901 |
+| 2147483647 | AGANZE | DADY   | MALE   | SOUTH    | huye      | kinazi  | sogwe   | aganzedady@gmail.com     |  792098765 |
+| 2147483647 | muhire | kenny  | MALE   | SOUTH    | nyaruguru | ruramba | ruramba | kennymuhire256@gmail.com | 2147483647 |
++------------+--------+--------+--------+----------+-----------+---------+---------+--------------------------+------------+
+4 rows in set (0.00 sec)
